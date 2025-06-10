@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/search.css">
+    <title>リアルタイム検索 - honkaku</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/icon150×150.png">
+            <h1>Restaurant evalution</h1>
+        </div>
+        <div class="item">
+            <p><a href="tags_list.php">タグで検索</a></p>
+        </div>
+        <div class="item">
+            <p><a href="profile.php">profile</a></p>
+        </div>
+        <div class="item2">
+            <p><a href="login.php">login</a></p>
+        </div>
+    </header>
+    <main>
+        <div class="search_form">
+            <h1>料理名で検索</h1>
+            <div class="search">
+                <input type="text" id="search" placeholder="料理名を入力" onkeyup="searchRecipes()">
+                <div id="results"></div>
+            </div>
+            <div class="menu_btn">
+                <p><a href="index.html">メニューへ</a></p>
+            </div>    
+        </div>
+    </main>
+    <footer>&copy; 2024OCA</footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

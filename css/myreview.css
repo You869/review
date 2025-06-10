@@ -1,0 +1,141 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    padding: 16px;
+    background:
+        repeating-radial-gradient(
+        circle at -1000% 0%,
+        rgba(116, 77, 48, 0.7),
+        #573216 7.5%,
+        rgba(116, 77, 48, 0.9) 10%
+        ),
+        repeating-radial-gradient(
+        circle at -1000% 0%,
+        #573216,
+        #573216 0.1%,
+        #744d30 0.4%,
+        #744d30 0.5%
+        );
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+h1{
+    color: #fff;
+    font-style: italic;
+    font-family: cursive;
+}
+.item a{
+    color: #fff;
+    font-size: 22px;
+    font-style: italic;
+    font-family: cursive;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+} 
+.item2 a{
+    padding-right: 80px;
+    color: #fff;
+    font-size: 22px;
+    font-style: italic;
+    font-family: cursive;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+}
+main{
+    text-align: center;
+}
+body{
+    background-color: rgb(201, 190, 169);
+}
+.list{
+    display: grid;
+    margin: auto;
+    padding-top: 20px;
+    width: 100%;
+    max-width: 80%;
+} 
+.btn1{
+    justify-content: center;
+    text-align: center;
+    padding-top: 20px;
+    display: flex;
+}
+.btn1 p{
+    padding: 20px;
+}
+.btn1 p a{
+    color: #fff;
+    background-color: #573216;
+    padding: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.btn1 p a:hover{
+    background-color: #fff;
+    color: #573216
+}
+tr td{
+    padding: 10px;
+}
+table{
+    border-radius: 0%;
+    background-color: #7f481e;
+}
+thead{
+    border: none;
+}
+tbody{
+    border: none;
+}
+th{
+    background-color: #844c21;
+    color: #fff;
+}
+tr{
+    color: #fff;
+}
+td a{
+    text-decoration: none;
+    color: #fff;
+}
+td a:hover{
+    font-weight: bold;
+}
+footer {
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background:
+        repeating-radial-gradient(
+        circle at -1000% 0%,
+        rgba(116, 77, 48, 0.7),
+        #573216 7.5%,
+        rgba(116, 77, 48, 0.9) 10%
+        ),
+        repeating-radial-gradient(
+        circle at -1000% 0%,
+        #573216,
+        #573216 0.1%,
+        #744d30 0.4%,
+        #744d30 0.5%
+        );
+}
+

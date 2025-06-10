@@ -1,0 +1,62 @@
+CREATE DATABASE SEISAKU DEFAULT CHARACTER SET utf8mb4;
+
+CREATE TABLE review (
+    `id`            SERIAL PRIMARY KEY,
+    `evaluation`         VARCHAR(255) NOT NULL,
+    `restaurantname`     VARCHAR(255) NOT NULL,
+    `dishname`     VARCHAR(255),
+    `username`     VARCHAR(255),
+    `review`       VARCHAR(255),
+    `image`        VARCHAR(255),
+    `published`     DATE DEFAULT CURRENT_DATE
+);
+
+CREATE TABLE login(
+    `id`         SERIAL PRIMARY KEY,
+    `name`       VARCHAR(255),
+    `password`   VARCHAR(255) NOT NULL, 
+    `image`      VARCHAR(255) DEFAULT 'default.jpg',
+    `birth_date` DATE DEFAULT NULL,
+    `created_at`  DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+DELETE FROM review;
+ALTER TABLE review AUTO_INCREMENT = 1;
+INSERT INTO review (evaluation, restaurantname, dishname, username, review, published) VALUES ('5', 'oca製麺店', '天ぷら', '山本', 'とても雰囲気が良かったです。', '2024-9-1');
+INSERT INTO review (evaluation, restaurantname, dishname, username, review, published) VALUES ('5', 'italy oca', 'カルボナーラ', '中村', 'カルボナーラがとてもおいしかったです。', '2024-9-11');
+INSERT INTO review (evaluation, restaurantname, dishname, username, review, published) VALUES ('5', '焼き鳥oca', 'もも塩', '堀口', 'にぎやかな店内で楽しかったです。', '2024-9-14');
+
+
+
+CREATE TABLE favorites (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,  -- ユーザーID
+    review_id INT NOT NULL, -- レビューID
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- 登録日
+    FOREIGN KEY (user_id) REFERENCES login(id), -- usersテーブルのIDに紐づけ
+    FOREIGN KEY (review_id) REFERENCES review(id) -- reviewテーブルのIDに紐づけ
+);
+ALTER TABLE favorites ADD UNIQUE (user_id, review_id);
+
+
+
+-- login テーブル
+CREATE TABLE `login` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,  -- 主キー（自動インクリメント）
+  `name` VARCHAR(255) DEFAULT NULL,     -- ユーザー名
+  `password` VARCHAR(255) NOT NULL,     -- パスワード（必須）
+  `image` VARCHAR(255) DEFAULT 'default.jpg',  -- プロフィール画像
+  `birth_date` DATE DEFAULT NULL,       -- 生年月日
+  `created_at` DATETIME DEFAULT current_timestamp()  -- 登録日時
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- review テーブル
+CREATE TABLE `review` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,  -- 主キー（自動インクリメント）
+  `evaluation` VARCHAR(255) NOT NULL,   -- 評価
+  `restaurantname` VARCHAR(255) NOT NULL, -- レストラン名
+  `dishname` VARCHAR(255) DEFAULT NULL,  -- 料理名
+  `username` VARCHAR(255) DEFAULT NULL,  -- ユーザー名（loginテーブルのnameカラムと関連）
+  `review` VARCHAR(255) DEFAULT NULL,    -- レビュー内容
+  `image` VARCHAR(255) DEFAULT NULL,     -- 画像
+  `published` DATE DEFAULT CURDATE()     -- 公開日
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

@@ -1,0 +1,141 @@
+/*document.html*/
+.search{
+    padding-top: 50px;
+    text-align: center;
+}
+.none{
+    display: none;
+}
+
+/*results.php*/
+.review_list{
+    margin: auto;
+    width: 660px;
+}
+/* login.php */
+.form{
+    padding-top: 70px;
+}
+.text h2{
+    font-family: serif;
+    font-size: 31px;
+    font-style: italic;
+}
+.logo{
+    text-align: center;
+}
+.login-btn p a{
+    color: #000;
+}
+.form-group label{
+    font-style: italic;
+    font-family: serif;
+    font-weight: bold;
+}
+.form-btn{
+    padding: 20px 0;
+}
+/* register.php */
+.wrapper {
+    width: 400px;
+    padding: 45px 30px;
+    margin: 0 auto;
+    background-color: #efeeee;
+}
+.form-group p{
+    margin: 0;
+    font-style: italic;
+    font-family: serif;
+    font-weight: bold;
+}
+.form-control{
+    display: inline-block;
+    width: 350px;
+    padding: 6px;
+    margin: 6px 0;
+}
+.birth-group{
+    padding-bottom: 20px;
+}
+.birth-group label{
+    font-style: italic;
+    font-family: serif;
+    font-weight: bold;
+}
+.btn{
+    color: #fff;
+    padding: 12px;
+    background-color: #000;   
+}
+.btn:hover{
+    background-color: #575757;
+}
+/* ログインフォーム遷移ボタン */
+.login-move p a{
+    color: #000;
+}
+/*welcome.php*/
+.my-5{
+    padding-top: 20px;
+    color: #fff;
+    text-align: center;
+}
+.welcome{
+    margin-top: 60px;
+    background:
+    repeating-radial-gradient(
+    circle at -1000% 0%,
+    rgba(116, 77, 48, 0.7),
+    #573216 7.5%,
+    rgba(116, 77, 48, 0.9) 10%
+    ),
+    repeating-radial-gradient(
+    circle at -1000% 0%,
+    #573216,
+    #573216 0.1%,
+    #744d30 0.4%,
+    #744d30 0.5%
+    );
+
+}
+/* solid016 */
+.menu{
+    display: flex;
+    text-align: center;
+    padding-top: 96px;
+    width: 100%;
+    justify-content: space-evenly;
+
+}
+.menu ul{
+    padding-bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.menu ul li {
+    margin: 10px;
+    width: 300px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(#fcfcfc, #fcfcfc 43%, #e7e7e7 51% 52%, #fff 53% 66%, #e0e0e0 70%, #c0c0c0);
+    filter: drop-shadow(2px 3px 4px #888);
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+  
+.menu ul li a {
+    font-family: monospace;
+    color: #000;
+    margin-top: 90px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.menu ul li:hover {
+    font-weight: bold;
+    animation: pulse 2s ease-in-out forwards;
+}

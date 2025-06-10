@@ -1,0 +1,146 @@
+/* search.html */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    padding: 16px;
+    background:
+        repeating-radial-gradient(
+        circle at -1000% 0%,
+        rgba(116, 77, 48, 0.7),
+        #573216 7.5%,
+        rgba(116, 77, 48, 0.9) 10%
+        ),
+        repeating-radial-gradient(
+        circle at -1000% 0%,
+        #573216,
+        #573216 0.1%,
+        #744d30 0.4%,
+        #744d30 0.5%
+        );
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+h1{
+    color: #fff;
+    font-style: italic;
+    font-family: cursive;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background:
+        repeating-radial-gradient(
+        circle at -1000% 0%,
+        rgba(116, 77, 48, 0.7),
+        #573216 7.5%,
+        rgba(116, 77, 48, 0.9) 10%
+        ),
+        repeating-radial-gradient(
+        circle at -1000% 0%,
+        #573216,
+        #573216 0.1%,
+        #744d30 0.4%,
+        #744d30 0.5%
+        );
+  }
+.item a{
+    color: #fff;
+    font-size: 22px;
+    font-style: italic;
+    font-family: cursive;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+} 
+.item a:hover {
+	color: #696868;
+}
+.item2 a{
+    padding-right: 80px;
+    color: #fff;
+    font-size: 22px;
+    font-style: italic;
+    font-family: cursive;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+}
+.item2 a:hover {
+	color: #696868;
+}
+ul{
+    text-decoration: none;
+}
+.search_form{
+    margin: 85px 350px;
+    padding: 165px 0;
+    text-align: center;
+    background:
+    repeating-radial-gradient(
+    circle at -1000% 0%,
+    rgba(116, 77, 48, 0.7),
+    #573216 7.5%,
+    rgba(116, 77, 48, 0.9) 10%
+    ),
+    repeating-radial-gradient(
+    circle at -1000% 0%,
+    #573216,
+    #573216 0.1%,
+    #744d30 0.4%,
+    #744d30 0.5%
+    );
+}
+.search_form h1{
+    color: #fff;
+}
+.search input{
+    font-size: 35px;
+}
+.menu_btn a{
+	color: #fff;
+	text-decoration: none;
+    margin-top: 30px;
+}
+.menu_btn a:hover{
+	font-weight: bold;
+	transition: 0.5s;
+}
+#results{
+    color: #fff;
+    display: grid;
+    font-size: 30px;
+    justify-content: center;
+    justify-items: center;
+}
+.result-image{
+    justify-content: center;
+    margin-left: 125px;
+    text-decoration: none;
+}
+
+.img-container {
+    width: 200px;       /* 親要素の幅を200pxに固定 */
+    height: 100px;      /* 親要素の高さを100pxに固定 */
+}
+
+.result-image {
+    width: 100%;        /* 画像の横幅を親要素に合わせて100%に設定 */
+    height: 100%;       /* 画像の高さを親要素に合わせて100%に設定 */
+    object-fit: cover;  /* 画像が親要素内でカバーされるように表示 */
+}

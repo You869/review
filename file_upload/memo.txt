@@ -1,0 +1,19 @@
+CREATE DATABASE file_db DEFAULT CHARACTER SET utf8mb4;
+
+CREATE TABLE file_table (
+    `id`            SERIAL PRIMARY KEY,
+    `file_name`     VARCHAR(255),
+    `file_path`     VARCHAR(255) UNIQUE,
+    `description`   VARCHAR(140),
+    `insert_time`   DATETIME DEFAULT CURRENT_TIMESTAMP,
+    `update_time`   DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE favorites (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,  -- ユーザーID
+    review_id INT NOT NULL, -- レビューID
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- 登録日
+    FOREIGN KEY (user_id) REFERENCES users(id), -- usersテーブルのIDに紐づけ
+    FOREIGN KEY (review_id) REFERENCES review(id) -- reviewテーブルのIDに紐づけ
+);

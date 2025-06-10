@@ -1,0 +1,124 @@
+/* 画像を丸くして、ボーダーをつける */
+img.profile-img {
+    width: 150px;            /* 画像の幅 */
+    height: 150px;           /* 画像の高さ */
+    border-radius: 50%;      /* 丸くする */
+    object-fit: cover;       /* 画像が縦横比を保持して、枠内に収まるようにトリミング */
+    border: 2px solid #333;  /* 画像の周りに5pxの黒いボーダーを追加 */
+}
+body{
+    background-color: rgb(231, 231, 231);
+}
+main{
+    text-align: center;
+}
+.myprofile{
+	padding: 130px 0; 
+	margin: 0px 320px;
+	color: #fff;
+	background:
+	repeating-radial-gradient(
+	circle at -1000% 0%,
+	rgba(116, 77, 48, 0.7),
+	#573216 7.5%,
+	rgba(116, 77, 48, 0.9) 10%
+	),
+	repeating-radial-gradient(
+	circle at -1000% 0%,
+	#573216,
+	#573216 0.1%,
+	#744d30 0.4%,
+	#744d30 0.5%
+	);
+
+}
+.icon{
+    display: flex;
+	width: 1392px;
+	justify-content: center;
+}
+.button a {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 230px;
+    padding: 10px 0px 10px 25px;
+    font-family: "Noto Sans Japanese";
+    line-height: 1.8;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+}
+.button a:before, .button a:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+}
+.button a:before {
+  width: 8px;
+  height: 8px;
+  left: 18px;
+  border-top: solid 2px #573216;
+  border-right: solid 2px #573216;
+  z-index: 2;
+  transform: translateY(-50%) rotate(45deg);
+  transition: all 0.3s;
+}
+.button a:after {
+  left: 0;
+  background: #eee;
+  z-index: 1;
+  width: 48px;
+  height: 48px;
+  border-radius: 84px;
+  transform: translateY(-50%);
+  transition: all 0.5s;
+}
+.button a span {
+  position: relative;
+  transition: all 0.3s;
+  z-index: 3;
+}
+
+.button a:hover span {
+  color: #573216;
+}
+.button a:hover:before {
+  left: 40px;
+  border-top: solid 2px #fff;
+  border-right: solid 2px #fff;
+}
+.button a:hover:after {
+  right: 0;
+  width: 100%;
+  background: #fff;
+}
+.menu_btn a{
+	color: #fff;
+	text-decoration: none;
+}
+.menu_btn a:hover{
+	font-weight: bold;
+	transition: 0.5s;
+}
+/* body{
+    vertical-align:middle; 
+    padding: 50px 0;
+    text-align: center;
+} */
+/* profile_update.php */
+#pro{
+	text-align: center;
+}
+.back a{
+	font-weight: bold;
+	color: #333;
+	text-decoration: none;
+}
+.back a:hover{
+	color: #6a6666;
+}

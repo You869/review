@@ -1,0 +1,272 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    padding: 16px;
+    background:
+        repeating-radial-gradient(
+        circle at -1000% 0%,
+        rgba(116, 77, 48, 0.7),
+        #573216 7.5%,
+        rgba(116, 77, 48, 0.9) 10%
+        ),
+        repeating-radial-gradient(
+        circle at -1000% 0%,
+        #573216,
+        #573216 0.1%,
+        #744d30 0.4%,
+        #744d30 0.5%
+        );
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+h1{
+    color: #fff;
+    font-style: italic;
+    font-family: cursive;
+}
+footer {
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background:
+        repeating-radial-gradient(
+        circle at -1000% 0%,
+        rgba(116, 77, 48, 0.7),
+        #573216 7.5%,
+        rgba(116, 77, 48, 0.9) 10%
+        ),
+        repeating-radial-gradient(
+        circle at -1000% 0%,
+        #573216,
+        #573216 0.1%,
+        #744d30 0.4%,
+        #744d30 0.5%
+        );
+  }
+/*index.html*/
+.bg_pattern {
+    padding-top: 1px;   
+    background-color: #e7e2d4;
+}
+.item a{
+    color: #fff;
+    font-size: 22px;
+    font-style: italic;
+    font-family: cursive;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+} 
+.item a:hover {
+	color: #696868;
+}
+.item2 a{
+    padding-right: 80px;
+    color: #fff;
+    font-size: 22px;
+    font-style: italic;
+    font-family: cursive;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+}
+.item2 a:hover {
+	color: #696868;
+}
+
+/*register_review.php*/
+/* .bg_pattern2 {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 74.4vh;
+    background-color: #ffe9a7;
+    opacity: 0.73;
+    z-index: -1;
+} */
+/* .Rectangles2 {
+    background-image:  repeating-linear-gradient(45deg, #9f7c12 25%, transparent 25%, transparent 75%, #9f7c12 75%, #9f7c12), repeating-linear-gradient(45deg, #9f7c12 25%, #cabb92 25%, #cabb92 75%, #9f7c12 75%, #9f7c12);
+    background-position: 0 0, 20px 20px;
+    background-size: 40px 40px;
+} */
+/* .bg_pattern3 {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 75.93vh;
+    background-color: #ffe9a7;
+    opacity: 0.73;
+    z-index: -1;
+} */
+/* .Rectangles3 {
+    background-image:  repeating-linear-gradient(45deg, #9f7c12 25%, transparent 25%, transparent 75%, #9f7c12 75%, #9f7c12), repeating-linear-gradient(45deg, #9f7c12 25%, #cabb92 25%, #cabb92 75%, #9f7c12 75%, #9f7c12);
+    background-position: 0 0, 20px 20px;
+    background-size: 40px 40px;
+} */
+  
+  /*=============
+  base
+  ==============*/
+  
+/* html, body {
+    margin: 0;
+    padding: 0;
+} */
+.menu{
+    display: flex;
+    text-align: center;
+    padding-top: 96px;
+    width: 100%;
+    justify-content: space-evenly;
+    background-color: #e7e2d4;
+
+}
+.menu ul{
+    padding-bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.menu ul li {
+    margin: 10px;
+    width: 300px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(#fcfcfc, #fcfcfc 43%, #e7e7e7 51% 52%, #fff 53% 66%, #e0e0e0 70%, #c0c0c0);
+    filter: drop-shadow(2px 3px 4px #888);
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+  
+.menu ul li a {
+    font-family: monospace;
+    color: #000;
+    margin-top: 90px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.menu ul li:hover {
+    animation: pulse 2s ease-in-out forwards;
+}
+.exp{
+    position: relative; /* 親要素の位置を相対に設定 */
+    padding-top: 150px;
+    text-align: center;
+    padding-bottom: 150px;
+    background-image: url(../img/backimg5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /* 画像をカバー */
+    color: white;
+}
+.exp::before {
+    content: ''; /* 空のコンテンツ */
+    position: absolute; /* 絶対位置に設定 */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* 黒いオーバーレイ (透明度0.5) */
+    z-index: 0; /* コンテンツの下に表示 */
+}
+.exp > * {
+    position: relative;
+    z-index: 1; /* コンテンツをオーバーレイの上に表示 */
+}
+
+.exp h2{
+    font-style: italic;
+    font-family: cursive;
+    padding-bottom: 20px;
+}
+.exp p{
+    font-family: serif;
+    padding-top: 15px;
+}
+/* .item{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+} */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+/*register_review.php*/
+.form-group{
+    width: 400px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: wheat;
+}
+.form-button{
+    width: 400px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: wheat;
+}
+/*index.php*/
+.list{
+    margin: auto;
+    width: 775px;
+} 
+.menu-list{
+    text-align: center;
+    padding-top: 78px;
+    padding-bottom: 660px;
+}
+.menu-list2{
+    text-align: center;
+    padding-top: 78px;
+}
+.result-image{
+    width: 100%;        /* 画像の横幅を親要素に合わせて100%に設定 */
+    height: 100%;       /* 画像の高さを親要素に合わせて100%に設定 */
+    object-fit: cover;  /* 画像が親要素内でカバーされるように表示 */
+
+}
+
+.img-container {
+    width: 300px;       /* 親要素の幅を200pxに固定 */
+    height: 200px;      /* 親要素の高さを100pxに固定 */
+}
+ /* myreview.php */
+.btn1 a{
+    color: #fff;
+    background-color: #573216;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.btn2 a{
+    color: #fff;
+    background-color: #573216;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+table th {
+    background-color: #573216;
+    color: white;
+}
+
